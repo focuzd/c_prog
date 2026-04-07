@@ -1,0 +1,13 @@
+# Add password
+$ ./passman add gmail
+Enter password: mypass123
+Saved password for 'gmail'
+
+# List all
+$ ./passman list
+1. gmail
+2. github
+
+# Get password
+$ ./passman get gmail
+Password: mypass123
