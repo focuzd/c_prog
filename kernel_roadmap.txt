@@ -376,3 +376,17 @@ Phase
 	Ongoing
 	Redis (after clone), libreswan (if networking path)
 	Deepen specialization, build reputation
+
+Modern Systems & Kernel Contribution Strategy (Added April 2026)
+----------------------------------------------------------------
+While classic tools (coreutils) are good for reading code, active contributions should pivot to high-velocity, kernel-adjacent projects:
+
+1. **Systemd & QEMU (Phase 1 & 2):**
+   - Replaces coreutils/util-linux for early patches.
+   - Highly active, modern C, utilizes advanced OS primitives (cgroups, IPC, virtualization).
+   - Maintainers actively tag "good first issues".
+2. **Syzbot (Phase 3):**
+   - The ultimate hack for kernel entry. Syzbot is Google's fuzzer that constantly finds bugs in the Linux kernel.
+   - Strategy: Find an open bug with a C reproducer, trace the memory/pointer issue, and submit a fix.
+3. **Email-Driven Workflows:**
+   - By Month 12, you MUST master `git send-email`. The Linux Kernel, QEMU, and Git do not use GitHub PRs. Patching via mailing lists is a mandatory skill.
