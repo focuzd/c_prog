@@ -1,0 +1,378 @@
+﻿Linux Kernel Engineering Roadmap
+March 2026 — July 2027
+Target: GSOC 2027 | Systems Internship Summer 2027 | EU Kernel Engineer
+
+
+Core Principles
+Daily Commitment
+2 hours — flexible timing based on class schedule
+	Sleep
+7 hours minimum — lights out 11 PM target
+	No AI Code Generation
+Man pages, docs, books only. Build with your own hands.
+	Debt Ledger
+₹500 per missed day → charity upon first salary. Current: ₹5500
+	
+
+	
+
+	
+
+The Commitment
+Give this path 110% until August 1, 2027. Process oriented — no chasing external rewards, only learning and building. On August 1, 2027 ask honestly: is this still the right path? If uncertainty remains after full honest effort, reassess. Until then — no excuses.
+	
+
+________________
+
+
+PHASE 1: C & Systems Literacy
+March 10, 2026 — September 10, 2026  |  6 Months
+	
+
+You are currently at Chapter 7 complete with exercises. Phase 1 picks up from Chapter 8.
+
+
+Month 1: C Fundamentals Continued (Mar 10 — Apr 10)
+	Content
+Week 1-2: Chapter 8 — Arrays (deep mastery, array tricks)
+Week 2-3: Chapter 9 — Functions
+Week 3-4: Chapter 10 — Program Organization
+Project: Snake game (arrays + game loop)
+Exploration: Tsoding videos on array internals
+Deliverables
+✓ King Chapters 8-10 complete with exercises
+✓ Snake game — playable
+✓ Can explain arrays, functions, program structure
+Resources
+K.N. King — C Programming: A Modern Approach (2nd Ed)
+devdocs.io/c
+Tsoding YouTube
+	
+
+Month 2: Pointers — The Critical Chapter (Apr 10 — May 10)
+	Content
+Week 1-2: Chapter 11 — Pointers (THE most important chapter)
+Week 2-3: Chapter 12 — Pointers and Arrays
+Week 3-4: Chapter 13 — Strings
+Project: String library from scratch using only pointers
+Do NOT rush this phase. Pointer mastery is non-negotiable.
+Deliverables
+✓ King Chapters 11-13 complete
+✓ String library implemented from scratch
+✓ Can explain pointer arithmetic without hesitation
+Resources
+K.N. King Chapters 11-13
+man pages for string.h functions
+	
+
+Month 3: Advanced C & Structures (May 10 — Jun 10)
+	Content
+Week 1: Chapter 14 — The Preprocessor
+Week 1-2: Chapter 15 — Writing Large Programs
+Week 2-3: Chapter 16 — Structures, Unions, Enumerations
+Week 3-4: Chapter 17 — Advanced Uses of Pointers
+Week 4: Chapter 18 — Declarations
+Project: Implement a basic malloc/free
+Deliverables
+✓ King Chapters 14-18 complete
+✓ Custom malloc implementation
+✓ Understanding of memory layout
+Resources
+K.N. King Chapters 14-18
+CS:APP reference for memory concepts
+	
+
+Month 4: Low-Level C & DSA Sprint (Jun 10 — Jul 10)
+	Content
+Week 1: Chapter 19 — Program Design
+Week 1-2: Chapter 20 — Low-Level Programming (critical for kernel path)
+Week 2-4: DSA in C — linked lists, hash tables, binary trees, sorting
+Project: Implement Huffman tree compressor (the one that intrigued you)
+Chapters 21-27 (Standard Library) — read selectively, reference as needed
+Deliverables
+✓ King Chapters 19-20 complete
+✓ DSA implementations from scratch
+✓ Huffman compressor working
+✓ Big-O complexity understood
+Resources
+K.N. King Chapters 19-20
+Algorithms in C — Sedgewick (reference)
+	
+
+Month 5: Build Systems & Unix System Calls (Jul 10 — Aug 10)
+	Content
+Week 1: Make, GDB debugging, Valgrind memory analysis
+Week 2: perf profiling, strace, AddressSanitizer
+Week 2-3: File I/O syscalls — open, read, write, close, lseek
+Week 3-4: Processes — fork, exec, wait. Signals — signal handlers
+Project: Mini shell (command execution, pipes, redirections)
+All previous projects get Makefiles
+Deliverables
+✓ Mini shell complete
+✓ Can debug with GDB
+✓ Can profile with perf
+✓ All projects have Makefiles
+Resources
+APUE — Advanced Programming in the Unix Environment (Stevens)
+man pages
+	
+
+Month 6: Networking Basics (Aug 10 — Sep 10)
+	Content
+Week 1-2: TCP/IP fundamentals, socket programming
+Week 2-3: HTTP protocol deep dive
+Week 3-4: Non-blocking I/O — select, poll, epoll
+Project: Simple HTTP server handling concurrent connections
+Project: TCP echo server/client
+Deliverables
+✓ HTTP server complete
+✓ TCP echo server/client working
+✓ Understanding of networking stack and epoll
+Resources
+Unix Network Programming — Stevens
+man pages for socket syscalls
+	
+
+Phase 1 Checkpoint — September 10, 2026
+✓ King's C Programming 2nd Ed — all 20 core chapters complete with exercises
+✓ DSA implementations in C from scratch
+✓ Build systems mastery (Make, GDB, perf, Valgrind)
+✓ Unix system calls (processes, signals, file I/O)
+✓ Basic networking (HTTP server, epoll)
+✓ Portfolio: Snake game, string library, malloc, Huffman compressor, mini shell, HTTP server
+✓ Can write correct C with no AI assistance
+	
+
+________________
+
+
+PHASE 2: User-Space Systems & First Contributions
+September 10, 2026 — March 10, 2027  |  6 Months
+	
+
+This phase is where GSOC 2027 preparation begins. Contributions to coreutils/util-linux start Month 7 to build community presence before the January 2027 application window.
+
+
+Month 7: Computer Architecture & First Open Source (Sep 10 — Oct 10)
+	Content
+Week 1-2: x86-64 assembly basics, calling conventions, reading compiler output
+Week 2-3: CS:APP Chapters 1-3 — machine-level programming
+Week 3-4: Cache architecture, memory hierarchy
+Contribution start: Study coreutils source, find first good-first-issue
+Project: Cache simulator
+Deliverables
+✓ Can read x86-64 assembly
+✓ Understand cache effects on performance
+✓ First coreutils/util-linux patch submitted
+Resources
+CS:APP — Computer Systems: A Programmer's Perspective
+coreutils source on savannah.gnu.org
+	
+
+Month 8: Performance, Optimization & Contributions (Oct 10 — Nov 10)
+	Content
+Week 1-2: CPU pipelines, branch prediction, SIMD basics
+Week 2-3: Linking and loading — ELF format, dynamic linking, PLT/GOT
+Week 3-4: Continue open source contributions — iterate on feedback
+Project: Optimize matrix multiplication (target 10x speedup)
+Project: Linker visualization tool
+Deliverables
+✓ 10x+ speedup on matrix multiply
+✓ Understanding of ELF and dynamic linking
+✓ 2-3 patches submitted to coreutils/util-linux
+Resources
+CS:APP Chapters 5, 7
+man ld, man objdump
+	
+
+Month 9: Database Internals from Scratch (Nov 10 — Dec 10)
+	Content
+Week 1-2: Storage engines, B-tree implementation
+Week 2-3: Buffer pool management
+Week 3-4: SQL parser basics, transaction support
+Project: Mini database with B-tree storage and simple SQL
+Continue contributions — target first merged patch this month
+Deliverables
+✓ Working mini database with persistence
+✓ First merged open source patch
+✓ Understanding of storage internals
+Resources
+Database Internals — Alex Petrov
+SQLite source code (reference)
+	
+
+Month 10: GSOC Preparation & Contribution Acceleration (Dec 10 — Jan 10, 2027)
+	Content
+GSOC 2027 application window opens January — this month is critical
+Week 1-2: Research GSOC 2027 orgs actively — identify target based on genuine interest
+Week 2-3: Begin contributing to GSOC target org specifically
+Week 3-4: Draft GSOC proposal outline, engage with org mentors on mailing list
+Continue existing contributions to coreutils/util-linux
+Deliverables
+✓ GSOC target organization identified
+✓ Active contributions to target org started
+✓ Mentor relationship initiated on mailing list
+✓ 5+ total merged patches across all projects
+Resources
+GSOC 2027 organization list (published December 2026)
+Target org mailing list and IRC/Matrix
+	
+
+Month 11: GSOC Application & Advanced Tooling (Jan 10 — Feb 10, 2027)
+	Content
+Week 1: Submit GSOC 2027 application — strong proposal backed by existing contributions
+Week 1-2: perf deep dive — hardware counters, flame graphs
+Week 2-3: Container internals — namespaces, cgroups, capabilities, seccomp
+Week 3-4: bpftrace basics, eBPF introduction
+Project: Mini container runtime from scratch
+Deliverables
+✓ GSOC 2027 application submitted
+✓ Container runtime working
+✓ Understand Linux isolation primitives
+Resources
+BPF Performance Tools — Brendan Gregg (introduction)
+Linux namespaces man pages
+	
+
+Month 12: Phase 2 Capstone — Redis Clone (Feb 10 — Mar 10, 2027)
+	Content
+Project: High-performance Redis clone
+RESP protocol compatible
+epoll-based event loop
+Persistent storage (AOF + RDB)
+Target: 100K operations/second
+Continue contributions while building
+Deliverables
+✓ Production-quality Redis clone with benchmarks
+✓ 10+ total merged patches across projects
+✓ GSOC application submitted and awaiting result
+Resources
+Redis source code (reference)
+RESP protocol specification
+	
+
+Phase 2 Checkpoint — March 10, 2027
+✓ Assembly and computer architecture understood
+✓ Performance optimization experience (10x matrix multiply)
+✓ Database internals — working B-tree database
+✓ Container runtime from scratch
+✓ Redis clone with 100K ops/sec
+✓ GSOC 2027 application submitted
+✓ 10+ merged patches: coreutils, util-linux, GSOC target org
+✓ Active mentor relationship with at least one open source maintainer
+	
+
+________________
+
+
+PHASE 3: Kernel Adjacent & GSOC Execution
+March 10, 2027 — July 2027  |  4 Months
+	
+
+GSOC 2027 results expected March-April. This phase runs in parallel with GSOC execution if accepted. Internship applications for summer 2027 happen during this phase.
+
+
+Month 13: OS Theory & GSOC Start (Mar 10 — Apr 10, 2027)
+	Content
+GSOC 2027 coding period begins (if accepted)
+OSTEP — Operating Systems: Three Easy Pieces (virtualization, concurrency, persistence)
+xv6 labs — MIT 6.S081 labs 1-6
+Internship applications — systems roles, EU and Japan targets
+Begin GSOC project work in parallel
+Deliverables
+✓ xv6 labs 1-6 complete
+✓ OS fundamentals solid
+✓ Internship applications submitted to target companies
+Resources
+OSTEP — free at ostep.org
+MIT 6.S081 course materials
+xv6 source on GitHub
+	
+
+Month 14: Linux Kernel Modules (Apr 10 — May 10, 2027)
+	Content
+Week 1-2: Kernel module basics — insmod, rmmod, kernel build system
+Week 2-3: Kernel memory allocation, character device drivers
+Week 3-4: File operations, ioctl interface
+Project: Simple /dev/mydevice character driver
+GSOC midterm evaluation — demonstrate progress
+Deliverables
+✓ Working kernel module
+✓ Character device driver complete
+✓ GSOC midterm evaluation passed
+Resources
+Linux Device Drivers — LDD3 (free online)
+kernel.org documentation
+	
+
+Month 15: eBPF & First Kernel Patches (May 10 — Jun 10, 2027)
+	Content
+Week 1-2: BPF architecture, verifier, BPF maps, program types
+Week 2-3: libbpf, CO-RE (Compile Once Run Everywhere)
+Week 3-4: Advanced BPF — XDP, LSM BPF
+Project: eBPF-based memory leak detector
+First kernel patch attempt — documentation or small fix
+Deliverables
+✓ eBPF monitoring tool working
+✓ First kernel patch submitted to LKML
+✓ GSOC project 70%+ complete
+Resources
+BPF Performance Tools — Brendan Gregg
+libbpf GitHub
+kernel.org/doc/html/latest/bpf
+	
+
+Month 16: Subsystem Specialization & GSOC Completion (Jun 10 — Jul 2027)
+	Content
+Choose specialization based on what has fascinated you most: Networking (net/), Storage (fs/), Security (LSM/seccomp), or eBPF
+Deep dive into chosen subsystem — read the code, understand the architecture
+GSOC final evaluation — project completion
+Continue kernel patch submissions
+August 1, 2027 — honest reassessment of the path
+Deliverables
+✓ Subsystem chosen and studied deeply
+✓ GSOC 2027 complete (if accepted)
+✓ 2-3 kernel patches submitted
+✓ Summer internship secured or actively interviewing
+Resources
+Subsystem mailing list
+kernel.org subsystem documentation
+LWN.net for kernel development news
+	
+
+Phase 3 Checkpoint — July 2027 / August 1 Reassessment
+✓ OS theory solid — xv6 labs complete
+✓ Linux kernel modules — character device driver
+✓ eBPF tooling — production monitoring tool
+✓ First subsystem chosen and studied
+✓ 2-3 kernel patches submitted to LKML
+✓ GSOC 2027 complete (if accepted)
+✓ Summer 2027 systems internship — active or secured
+✓ August 1: Honest answer to — is this still the right path?
+	
+
+________________
+
+
+Open Source Contribution Track
+Contributions run parallel to all phases. This is not a separate activity — it is integrated into the daily 2 hours.
+
+
+Phase
+	Projects
+	Purpose
+	Phase 1 (Sep 2026)
+	coreutils, util-linux, busybox
+	First patch experience, C in real codebases, code review process
+	Phase 2 (Oct-Dec 2026)
+	coreutils, curl, tmux, GSOC target org
+	Build contribution history, engage mentors, prepare for GSOC application
+	Phase 2 (Jan 2027)
+	GSOC target org (primary)
+	GSOC application backed by real contributions
+	Phase 3 (2027)
+	GSOC project, Linux kernel LKML
+	Kernel patch experience, subsystem engagement
+	Ongoing
+	Redis (after clone), libreswan (if networking path)
+	Deepen specialization, build reputation
