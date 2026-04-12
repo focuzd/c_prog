@@ -19,9 +19,11 @@
       "difficulty": 1,
       "question": "Consider this code:\n\n```c\nchar ch = '';\nprintf(\"%c\", ch);\n```\n\nWill this compile? Why or why not?",
       "rubric": "Must state that it will NOT compile because an empty character literal `''` is invalid in C. A char must contain exactly one character (like 'a' or '\\0'). Strings can be empty `\"\"`, but not single chars.",
-      "next_due": "2026-04-12",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-05-03",
+      "last_asked": "2026-04-12",
+      "score_history": [
+        5
+      ]
     },
     {
       "id": "pointer-type-mismatch-ub-11",
@@ -31,9 +33,11 @@
       "difficulty": 3,
       "question": "You write this code:\n\n```c\ndouble x = 3.75;\nint *p = (int *)&x;\nprintf(\"%d\", *p);\n```\n\nWhat happens and why? Does it print 3?",
       "rubric": "Must explain that it does NOT print 3. It reads the raw bits of the double (IEEE 754 representation) as if they were a two's complement integer. Must also mention this is Undefined Behavior (strict aliasing violation) and that pointer types determine how the data at the address is interpreted.",
-      "next_due": "2026-04-12",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-04-13",
+      "last_asked": "2026-04-12",
+      "score_history": [
+        3
+      ]
     }
   ]
 }
