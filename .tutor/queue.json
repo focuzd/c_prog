@@ -33,10 +33,11 @@
       "difficulty": 3,
       "question": "You write this code:\n\n```c\ndouble x = 3.75;\nint *p = (int *)&x;\nprintf(\"%d\", *p);\n```\n\nWhat happens and why? Does it print 3?",
       "rubric": "Must explain that it does NOT print 3. It reads the raw bits of the double (IEEE 754 representation) as if they were a two's complement integer. Must also mention this is Undefined Behavior (strict aliasing violation) and that pointer types determine how the data at the address is interpreted.",
-      "next_due": "2026-04-13",
-      "last_asked": "2026-04-12",
+      "next_due": "2026-05-04",
+      "last_asked": "2026-04-13",
       "score_history": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -47,9 +48,11 @@
       "difficulty": 2,
       "question": "Given `int i = 10; int *p = &i;`, what does the expression `&*p` evaluate to conceptually? Can you assign a value to `&*p` (e.g. `&*p = 20;`)?",
       "rubric": "Must state that `&*p` evaluates to `p` (the address of `i`). Must state that you CANNOT assign a value to `&*p` because the `&` operator produces an rvalue (a raw memory address), not an lvalue (an object that can store data).",
-      "next_due": "2026-04-13",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-04-14",
+      "last_asked": "2026-04-13",
+      "score_history": [
+        2
+      ]
     },
     {
       "id": "dangling-pointer-11",
@@ -59,9 +62,11 @@
       "difficulty": 3,
       "question": "A junior engineer writes this function to find the largest of two integers:\n\n```c\nint *get_larger(int a, int b) {\n    int max = (a > b) ? a : b;\n    return &max;\n}\n```\n\nWhat is the critical bug here? How does the memory layout (stack vs heap) explain why this is dangerous?",
       "rubric": "Must identify that this returns a dangling pointer. Must explain that `max` is a local variable allocated on the stack frame of `get_larger`. When the function returns, its stack frame is popped/invalidated, meaning the returned pointer points to memory that will be overwritten by future function calls.",
-      "next_due": "2026-04-13",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-05-04",
+      "last_asked": "2026-04-13",
+      "score_history": [
+        5
+      ]
     },
     {
       "id": "pointers-vs-globals-11",
@@ -71,9 +76,11 @@
       "difficulty": 2,
       "question": "In Chapter 11, you refactored `poker.c` to use local variables in `main` passed via pointers to `analyze_hand`, instead of using global arrays. For a Linux kernel engineer, why is avoiding global state critical when writing device drivers or kernel functions?",
       "rubric": "Must mention concurrency/multithreading. If a kernel function uses global variables, multiple processes or threads calling that function simultaneously will overwrite each other's data (race conditions). Local variables passed by pointer are thread-safe because each thread gets its own stack frame.",
-      "next_due": "2026-04-13",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-04-14",
+      "last_asked": "2026-04-13",
+      "score_history": [
+        2
+      ]
     }
   ]
 }
