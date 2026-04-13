@@ -48,10 +48,11 @@
       "difficulty": 2,
       "question": "Given `int i = 10; int *p = &i;`, what does the expression `&*p` evaluate to conceptually? Can you assign a value to `&*p` (e.g. `&*p = 20;`)?",
       "rubric": "Must state that `&*p` evaluates to `p` (the address of `i`). Must state that you CANNOT assign a value to `&*p` because the `&` operator produces an rvalue (a raw memory address), not an lvalue (an object that can store data).",
-      "next_due": "2026-04-14",
-      "last_asked": "2026-04-13",
+      "next_due": "2026-05-05",
+      "last_asked": "2026-04-14",
       "score_history": [
-        2
+        2,
+        5
       ]
     },
     {
@@ -76,10 +77,11 @@
       "difficulty": 2,
       "question": "In Chapter 11, you refactored `poker.c` to use local variables in `main` passed via pointers to `analyze_hand`, instead of using global arrays. For a Linux kernel engineer, why is avoiding global state critical when writing device drivers or kernel functions?",
       "rubric": "Must mention concurrency/multithreading. If a kernel function uses global variables, multiple processes or threads calling that function simultaneously will overwrite each other's data (race conditions). Local variables passed by pointer are thread-safe because each thread gets its own stack frame.",
-      "next_due": "2026-04-14",
-      "last_asked": "2026-04-13",
+      "next_due": "2026-04-17",
+      "last_asked": "2026-04-14",
       "score_history": [
-        2
+        2,
+        3
       ]
     },
     {
@@ -90,9 +92,11 @@
       "difficulty": 2,
       "question": "In the loop condition `for (p = a; p < a + N; p++)`, `a + N` points to one element past the end of the array `a` of size `N`. Why is this safe in C? Is it legal to dereference `a + N`?",
       "rubric": "Must explain that the C standard explicitly guarantees it is legal to compute a pointer to one past the last element of an array for comparison purposes, but it is undefined behavior to dereference that pointer.",
-      "next_due": "2026-04-14",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-04-24",
+      "last_asked": "2026-04-14",
+      "score_history": [
+        4
+      ]
     },
     {
       "id": "chap12-pointer-arithmetic-bytes",
@@ -102,9 +106,11 @@
       "difficulty": 2,
       "question": "If `int a[10]; int *p = a;`, what happens to the underlying memory address when you do `p++`? Assume `sizeof(int) == 4`.",
       "rubric": "Must state that the address increases by 4 bytes (or the size of the underlying type), not by 1 byte.",
-      "next_due": "2026-04-14",
-      "last_asked": null,
-      "score_history": []
+      "next_due": "2026-04-15",
+      "last_asked": "2026-04-14",
+      "score_history": [
+        2
+      ]
     }
   ]
 }

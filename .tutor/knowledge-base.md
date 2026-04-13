@@ -79,6 +79,7 @@ _Updated by the digest agent. Cross-reference with `kernel_roadmap.txt`._
 
 ## Identified Gaps
 
+- [ ] Pointer arithmetic byte scaling (understanding how p++ translates to raw memory addresses)
 - [ ] Lvalues vs Rvalues (specifically regarding address-of operator returning an rvalue)
 - [ ] Concurrency and Race Conditions (understanding why global variables are dangerous in kernels)
 - [ ] Undefined Behavior and Strict Aliasing (needs broader coverage beyond type punning)
@@ -113,6 +114,7 @@ _Updated by the digest agent. Cross-reference with `kernel_roadmap.txt`._
 
 ## Mental Models
 
+- Pointer arithmetic scale: Understands semantic pointer arithmetic (e.g., p++ goes to next element) but needs to solidify how this translates to raw byte addresses scaling by sizeof(type).
 - **Lvalues vs Rvalues**: Now understands that `*p` yields an lvalue (the object itself), but applying the address-of operator `&(*p)` yields an rvalue (a raw memory address) which cannot be modified or assigned to.
 - Pointer interpretation: Understands that casting pointers changes how the underlying bits are read, not the bits themselves.
 - "Array name = address of first element, not a pointer variable" — conceptually stated but not yet tested under pointer chapter.
