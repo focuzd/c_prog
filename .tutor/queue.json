@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-13",
-    "total_questions": 5,
+    "last_updated": "2026-04-14",
+    "total_questions": 7,
     "intervals": {
       "score_5": 14,
       "score_4": 7,
@@ -81,6 +81,30 @@
       "score_history": [
         2
       ]
+    },
+    {
+      "id": "chap12-pointer-arithmetic-bounds",
+      "concept": "Pointer arithmetic and array bounds",
+      "chapter": 12,
+      "type": "explain",
+      "difficulty": 2,
+      "question": "In the loop condition `for (p = a; p < a + N; p++)`, `a + N` points to one element past the end of the array `a` of size `N`. Why is this safe in C? Is it legal to dereference `a + N`?",
+      "rubric": "Must explain that the C standard explicitly guarantees it is legal to compute a pointer to one past the last element of an array for comparison purposes, but it is undefined behavior to dereference that pointer.",
+      "next_due": "2026-04-14",
+      "last_asked": null,
+      "score_history": []
+    },
+    {
+      "id": "chap12-pointer-arithmetic-bytes",
+      "concept": "Pointer arithmetic scale",
+      "chapter": 12,
+      "type": "predict",
+      "difficulty": 2,
+      "question": "If `int a[10]; int *p = a;`, what happens to the underlying memory address when you do `p++`? Assume `sizeof(int) == 4`.",
+      "rubric": "Must state that the address increases by 4 bytes (or the size of the underlying type), not by 1 byte.",
+      "next_due": "2026-04-14",
+      "last_asked": null,
+      "score_history": []
     }
   ]
 }

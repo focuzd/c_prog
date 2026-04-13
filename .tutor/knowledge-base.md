@@ -45,6 +45,7 @@ _Updated by the digest agent. Cross-reference with `kernel_roadmap.txt`._
 | 9 | Functions | ✅ Done | average, countdown, prime, pun2, qsort, rough + 18 exercises |
 | 10 | Program Organization | ✅ Done | guess variants, poker + all exercises |
 | 11 | Pointers | ✅ Done | maxmin.c, exercises (pass-by-reference, returning pointers) |
+| 12 | Pointers and Arrays | 🔄 In Progress | reverse3.c |
 
 ---
 
@@ -156,3 +157,15 @@ _Appended by review agent after each session. Empty until first session runs._
 **Concepts promoted/demoted**: Promoted pointer mechanics, pass-by-reference, and returning pointers to Solid.
 **New gaps identified**: None.
 **Roadmap status**: On track for Month 2 (Pointers). Ready for Chapter 12 (Pointers and Arrays).
+---
+
+## Digest — 2026-04-14
+
+**Summary**: The learner added `reverse3.c`, a textbook example from Chapter 12 demonstrating array traversal using pointers. Since there is no original exercise code (`que*.c`), no new mental models can be verified yet, but they have begun the critical Pointers and Arrays chapter.
+
+**Changes detected**: `chap12/reverse3.c`
+**Code quality issues**: None (textbook code).
+**Mental model observations**: The learner is moving into pointer arithmetic, comparing pointers (`p < a + N`), and using pointers to iterate through arrays.
+**Concepts promoted/demoted**: None.
+**New gaps identified**: None.
+**Roadmap status**: On track. Started Chapter 12 (Pointers and Arrays).
