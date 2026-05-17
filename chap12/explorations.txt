@@ -1,0 +1,2 @@
+the name of array is a pointer to the first element on the array, but sizeof function returns the size of complete array
+whereas sizeof a pointer to the first element of the array will return the size of a pointer

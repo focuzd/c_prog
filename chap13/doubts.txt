@@ -1,0 +1,19 @@
+octal and hexadecimal escapes
+splicing in C
+a Unicode character requires 1-4 bytes to be stored
+the primitive data type char has a fixed size of 1 byte, so we can only store characters that require or use 1 byte
+char date1[8] = "June 14";
+when I write this, does this create a character array of length 8 and copy the characters of the string literal to it ?
+yes it creates a character array with the characters same as that of 
+why are string literals immutable?
+
+what do you actually mean by rvalue and lvalue?
+array name is a non modifiable lvalue
+how does adding an extra parameter n slow down the function such as strncpy and strncat
+
+how memory allocation works in the snippet below; 
+char *str;
+
+fgets(str, count, stdin);
+I did not any space for the string to be stored, so where exactly is the string being stored and what is the max size 
+of the string I can store using the following snippet
