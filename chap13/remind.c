@@ -22,19 +22,20 @@ int main(void)
         scanf("%2d", &day);
         if (day == 0)
             break;
-    sprintf(day_str, "%2d", day);
-    read_line(msg_str, MSG_LEN);
+        
+        sprintf(day_str, "%2d", day);
+        read_line(msg_str, MSG_LEN);
 
-    for (i = 0; i < num_remind; i++)
-        if (strcmp(day_str, reminders[i]) < 0)
-            break;
-    for (j = num_remind; j > i; j--)
-        strcpy(reminders[j], reminders[j-1]);
+        for (i = 0; i < num_remind; i++)
+            if (strcmp(day_str, reminders[i]) < 0)
+                break;
+        for (j = num_remind; j > i; j--)
+            strcpy(reminders[j], reminders[j-1]);
 
-    strcpy(reminders[i], day_str);
-    strcat(reminders[i], msg_str);
+        strcpy(reminders[i], day_str);
+        strcat(reminders[i], msg_str);
 
-    num_remind++;
+        num_remind++;
     }
     
     printf("\nDay Reminder\n");
