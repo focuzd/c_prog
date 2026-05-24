@@ -1,0 +1,6 @@
+to define a object in c means the compiler sets aside memory to store the object, declaration of object means the identifier and type of the object is determined by the compiler
+how scope rules apply to the variable declared by extern keyword and since the variable is defined once all the different files access the same memory location when reading or writing into the variable
+we only include the function prototypes using the header files, how does the compiler access the function definition present in other files
+is make recursive for example if I am building a target and one of the dependencies is indirectly modified will make rebuild the dependency first and then the desired target or use  the old dependency version
+yup make is recursive
+why to copies of the a function in object code, leads to errors
