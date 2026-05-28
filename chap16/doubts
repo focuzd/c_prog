@@ -1,0 +1,6 @@
+what is a namespace
+Each FILE structure stores information about the state of an open file
+and therefore must be unique in a program. ? what does this mean, what must be unique in a program?
+how does assignment works in case of nested structures, ig it will create a complete copy since for two compatible structure the nested structure will also be compatible and thus be copied 
+what if I assign Enum a value that is not equal to one of the constants -> well the compiler does not bother
+structure alignment will depend on the starting address of the structure ?
