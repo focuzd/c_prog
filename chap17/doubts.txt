@@ -1,0 +1,20 @@
+int * restrict p;
+int * restrict q;
+
+p = malloc(sizeof(int));
+q = p;
+*q = 0;  /* causes undefined behavior */
+
+the books explanation for restricted pointer is -> if p points to an object that is later modified, then that object is not accessed in any way other than through p.
+meaning if p points to an object that can be modified only way to access the object should be through p, using any other pointer to access the same object causes undefined behavior, this works for dynamic storage allocation but what about variable with identifiers if I have a restricted pointer to a variable with an identifier using identifier to modify the value will cause undefined behavior ? and whats the use of restricted pointers what do we want to achieve using it , allows aliases for a object in memory but do not allow access to the memory through those aliases,  essentially creating only one way interface access a block of memory
+
+
+why is the NULL macro defined in multiple header files, although since its a macro it wont cause multiple definition error during linking since its removed after preprocessing but why is it defined at multiple locations in the standard library
+
+does realloc initialize the memory it allocates, the extra space allocated? -> it does  not initialize the memory added to the block
+
+can I use realloc to resize an object that was statically allocated? -> no it must be dynamically allocated by a previous call to malloc, calloc or realloc 
+
+can I undeclare an identifier in c; -> doing so would be helpful especially for use after free class of bugs
+
+for a structure with a variable length array as a memeber when I defined a regular member how is memory allocated, not using malloc to create a block of memory and assigning to a pointer to the structure
