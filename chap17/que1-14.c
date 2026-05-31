@@ -8,11 +8,9 @@ struct node {
 
 void add_to_list(struct node** list, int n)
 {
-    struct node* new_node;
-
-    new_node = malloc(sizeof(struct node));
+    struct node* new_node = malloc(sizeof(*new_node));
     if (new_node == NULL) {
-        printf("malloc failed in add_to_list\n");
+        printf("Error: malloc failed in add_to_list.\n");
         exit(EXIT_FAILURE);
     }
 
@@ -21,15 +19,7 @@ void add_to_list(struct node** list, int n)
     *list = new_node;
 }
 
-struct node* search_list(struct node* list, int n)
-{
-    while (list != NULL && list->value != n)
-        list = list->next;
-
-    return list;
-}
-
-void delete_list(struct node** list, int n)
+void delete_from_list(struct node** list, int n)
 {
     struct node* prev, * curr;
     for (prev = NULL, curr = *list;
@@ -38,35 +28,15 @@ void delete_list(struct node** list, int n)
 
     if (curr == NULL)
         return;
-    if (prev == NULL)
+
+    if (prev == NULL) {
         *list = (*list)->next;
-    else
-        prev->next = curr->next;
-
-    free(curr);
-}
-
-void delete_list2(struct node** list, int n)
-{
-    struct node* p, * temp;
-
-
-    p = *list;
-    if (p->value == n) {
-        *list = (*list)->next;
-        free(p);
+        free(curr);
         return;
     }
 
-    while (p->next != NULL && p->next->value != n)
-        p = p->next;
-
-    if (p->next == NULL)
-        return;
-    
-    temp = p->next;
-    p->next = p->next->next;
-    free(temp);
+    prev->next = curr->next;
+    free(curr);
 }
 
 int main(void)
@@ -76,21 +46,30 @@ int main(void)
     add_to_list(&first, 18);
     add_to_list(&first, 27);
     add_to_list(&first, 20);
+    add_to_list(&first, 81);
+    add_to_list(&first, 64);
 
     for (p = first; p != NULL; p = p->next)
         printf(" %d", p->value);
     printf("\n");
 
-    delete_list2(&first, 20);
-    delete_list2(&first, 18);
-    delete_list2(&first, 27);
+    delete_from_list(&first, 64);
 
     for (p = first; p != NULL; p = p->next)
         printf(" %d", p->value);
     printf("\n");
 
-    p = search_list(first, 27);
-    printf("%p\n", p);
+    delete_from_list(&first, 18);
+
+    for (p = first; p != NULL; p = p->next)
+        printf(" %d", p->value);
+    printf("\n");
+
+    delete_from_list(&first, 20);
+
+    for (p = first; p != NULL; p = p->next)
+        printf(" %d", p->value);
+    printf("\n");
 
     return 0;
 }

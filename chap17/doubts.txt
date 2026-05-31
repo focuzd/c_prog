@@ -18,3 +18,5 @@ can I use realloc to resize an object that was statically allocated? -> no it mu
 can I undeclare an identifier in c; -> doing so would be helpful especially for use after free class of bugs
 
 for a structure with a variable length array as a memeber when I defined a regular member how is memory allocated, not using malloc to create a block of memory and assigning to a pointer to the structure
+
+0 is converted to the proper internal form by the compiler. -> what does this mean?
