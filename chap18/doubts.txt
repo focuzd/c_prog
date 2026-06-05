@@ -1,0 +1,30 @@
+when does const prevent modifying an object and when does it prevent modifying a pointer?
+
+const int n = 10;
+int a[n]; 
+book says this example is valid in C99 only if a has automatic storage duration and not when a has static storage duration why is that?
+
+here it is talking about the array not the variable, because in c const does not create compile time constants. if a was static then the size mut be allocated at compile time thus the value of n must be known at compile time but this is only possible if n itself was determined at compile time but here n is determined at run time
+
+since the value of variable is not computed before execution, thus the initialization of variables with static storage duration cannot have variables and therefore they must be constants 
+
+for a variable with static storage duration its properties size and value if we are also initializing must be known at compile time since variables with static storage duration are declared and initialized at compile time 
+
+for a function defined inline, compiler does not create an external symbol and according to the c99 standard a function defined as inline will not be compiled locally so if the compiler fails an inline expansion at a call this will cause an undefined reference error because it cannot use the local definition of inline function (-> not exactly function can still resort to the local definition of the function but if the inline expansion fails in multiple files each file would need to compile the local definition of the function and thus multiple definitions of the same function will be present in the binary bloating it )
+also the behavior can depend on the compiler implementation, so what we do is create a source file with the function prototype using the extern storage class and the function is not declared inline there, so what it does is created an external symbol for the function solving the undefined reference error and also extern tells the compiler that the function is defined elsewhere 
+
+so it is essentially an optimized approach if compiler fails inline expansion in multiple files then each file would need to compile the local function definition bloating the binary with multiple defintions of the same function so a better approach is to use a separate source file to externally expose the function and then a single compiled version of the function can be used when the inline expansion fails creating a better binary
+
+focuzd@kratos:~/c_prog/chap18$ gcc -o test test.c
+/usr/bin/ld: /tmp/ccbpiyp7.o: in function `main':
+test.c:(.text+0xe): undefined reference to `foo'
+collect2: error: ld returned 1 exit status
+focuzd@kratos:~/c_prog/chap18$ cat test.c
+// test_inline.c — single file
+inline int foo(int x) { return x + 1; }
+
+int main(void) {
+    return foo(5);
+}
+
+my reasoning was wrong even when the compiler has the local definiton it wont compile the local definiton it will throw an undefined reference error in case the iniline expansion fails because there is no symbol for the function name, neither internally nor externally (ig
