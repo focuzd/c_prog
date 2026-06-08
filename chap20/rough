@@ -1,0 +1,7 @@
+10101011 -> count = 5
+
+a & a = a | a & 1 = a  | a & 0 = 0
+a ^ a = 0 | a ^ 1 = ~a | a ^ 0 = a
+a | a = a | a | 1 = 1  | a | 0 = a
+
+number of 1's = power of 2's used to build the number
